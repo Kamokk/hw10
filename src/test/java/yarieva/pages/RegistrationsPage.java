@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class RegistrationsPage {
     // locators & elements
     private final String FORM_TITLE = "Student Registration Form";
-    public CalendarComponent calendar = new CalendarComponent();
     private final SelenideElement
             formTitle = $(".practice-form-wrapper");
     private final SelenideElement firstNameInput = $("#firstName");
@@ -30,6 +29,7 @@ public class RegistrationsPage {
     private final SelenideElement stateDropDownList = $("#state");
     private final SelenideElement cityDropDownList = $("#city");
     private final SelenideElement submitButton = $("#submit");
+    public CalendarComponent calendar = new CalendarComponent();
 
     // actions
     public RegistrationsPage openPage() {
