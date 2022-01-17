@@ -25,10 +25,12 @@ public class TestBase {
         CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
         String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
         Configuration.remote = format("https://%s:%s@%s", credentials.login(), credentials.password(), url);
+        Configuration.timeout=20000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+
 
         Configuration.browserCapabilities = capabilities;
     }
