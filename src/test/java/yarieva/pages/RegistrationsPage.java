@@ -14,24 +14,22 @@ import static com.codeborne.selenide.Selenide.open;
 public class RegistrationsPage {
     // locators & elements
     private final String FORM_TITLE = "Student Registration Form";
-
-    private SelenideElement
-            formTitle = $(".practice-form-wrapper"),
-            firstNameInput = $("#firstName"),
-            lastNameInput = $("#lastName"),
-            resultsTable = $(".table-responsive"),
-            emailInput = $("#userEmail"),
-            genderRadioButton = $("#genterWrapper"),
-            phoneNumberInput = $("#userNumber"),
-            subjectInput = $("#subjectsInput"),
-            hobbiesCheckBox = $("#hobbiesWrapper"),
-            pictureButton = $("#uploadPicture"),
-            currentAddress = $("#currentAddress"),
-            stateDropDownList = $("#state"),
-            cityDropDownList = $("#city"),
-            submitButton = $("#submit");
-
     public CalendarComponent calendar = new CalendarComponent();
+    private final SelenideElement
+            formTitle = $(".practice-form-wrapper");
+    private final SelenideElement firstNameInput = $("#firstName");
+    private final SelenideElement lastNameInput = $("#lastName");
+    private final SelenideElement resultsTable = $(".table-responsive");
+    private final SelenideElement emailInput = $("#userEmail");
+    private final SelenideElement genderRadioButton = $("#genterWrapper");
+    private final SelenideElement phoneNumberInput = $("#userNumber");
+    private final SelenideElement subjectInput = $("#subjectsInput");
+    private final SelenideElement hobbiesCheckBox = $("#hobbiesWrapper");
+    private final SelenideElement pictureButton = $("#uploadPicture");
+    private final SelenideElement currentAddress = $("#currentAddress");
+    private final SelenideElement stateDropDownList = $("#state");
+    private final SelenideElement cityDropDownList = $("#city");
+    private final SelenideElement submitButton = $("#submit");
 
     // actions
     public RegistrationsPage openPage() {
