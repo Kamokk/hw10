@@ -13,9 +13,8 @@ import yarieva.pages.RegistrationsPage;
 public class TestBase {
     RegistrationsPage registrationsPage = new RegistrationsPage();
 
-
     @BeforeAll
-    static void beforeAll() {
+    static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.startMaximized = true;
@@ -26,7 +25,6 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.timeout = 20000;
     }
 
     @AfterEach
